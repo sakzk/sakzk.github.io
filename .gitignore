@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Jekyll build
+/_site/
+/.jekyll-cache/
+/.sass-cache/
+
+# Dependency directories
+/vendor/
+/.bundle/
+Gemfile.lock
+
+# Local configuration file
+/_config.local.yml
+
