@@ -5,8 +5,11 @@ date:   2024-01-29 14:00:00 +0900
 ---
 
 ## 2024-01-29
-front matter を `categories: test` としていたら .html がつくられていなかった。
-front matter の categories がなくても _site 内に .html が生成できたし、
+問題： .md に対応する .html が生成されておらず、index.html 内に記事へのリンクがなかった。
+
+原因：front matter に `categories: test` と書いていた。
+
+対策：front matter の categories がなくても _site 内に .html が生成できたし、
 記事分類のこうもり問題を避けるためにも categories はつかわないことにする。
 
 なお、ビルド時に .md に対応する .html が _site/ に作られるための必要条件には以下のものがある。
