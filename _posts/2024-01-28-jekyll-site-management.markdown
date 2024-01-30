@@ -5,7 +5,7 @@ date:   2024-01-29 14:00:00 +0900
 ---
 
 ## 2024-01-29 _site/foo.html が生成されない問題を解決した。
-問題： .md に対応する .html が生成されておらず、そのため index.html 内の記事リンクも生成されていなかった。
+問題： _posts/foo.md に対応する _site/foo.html が生成されておらず、そのため index.html 内の記事リンクも生成されていなかった。
 
 原因：front matter に `categories: test` と書いていた。
 
