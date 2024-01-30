@@ -20,3 +20,13 @@ date:   2024-01-29 14:00:00 +0900
 .md ファイルを生成するスクリプトは
 [create_article_file.sh](https://github.com/sakzk/sakzk.github.io/blob/main/create_article_file.sh)。
 このスクリプトは_siteには不必要なので_config.ymlのexcludeに追加しておく。
+
+## 2024-01-30 画像ファイルをpngからwebpにした。
+手順：
+1. `brew install webp` で cwebp をインストールする
+- `brew install cwebp` ではだめ。 `Warning: No available formula with the name "cwebp". Did you mean cweb or webp?` という警告がでるので webp を選ぶ。
+2. `find . -type f -name "*.png"` で png ファイルを探す。
+3. `webp foo.png -o bar.webp` でファイルを変換する。
+4. リンクの置換はVSCodeから行った。
+
+今回はファイルが一つしかないことがわかっていたので手作業でやった。今後、画像はwebp ファイルでアップロードしていく。
