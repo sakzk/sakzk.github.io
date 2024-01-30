@@ -5,7 +5,7 @@ date:   2024-01-29 14:00:00 +0900
 ---
 
 ## 2024-01-29
-問題： .md に対応する .html が生成されておらず、index.html 内に記事へのリンクがなかった。
+問題： .md に対応する .html が生成されておらず、そのため index.html 内の記事リンクも生成されていなかった。
 
 原因：front matter に `categories: test` と書いていた。
 
@@ -19,4 +19,4 @@ date:   2024-01-29 14:00:00 +0900
 
 .md ファイルを生成するスクリプトは
 [create_article_file.sh](https://github.com/sakzk/sakzk.github.io/blob/main/create_article_file.sh)。
-このスクリプトは_siteには不必要なので_config.ymlのexcludeに追加しておく
+このスクリプトは_siteには不必要なので_config.ymlのexcludeに追加しておく。
