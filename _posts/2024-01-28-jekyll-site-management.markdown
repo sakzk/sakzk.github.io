@@ -51,7 +51,7 @@ ps aux | grep "jekyll" | grep -v "grep" | awk "{print \$2}" | xargs kill -SIGINT
 ブログ関連のコマンドは 以下のようにまとめて alias して、`.zshrc` に記述している。
 
 ```bash
-# commands for blog
+# commands for blogging
 # 処理を追加する場合、`bundle exec jekyll serve`は最後におく。
 alias blog='cd ~/sakzk-Mysite && ./create_article_file.sh && code . && open -a "/Applications/Microsoft Edge.app" && bundle exec jekyll serve'
 alias serv='ps aux | grep "jekyll" | grep -v "grep" | awk "{print \$2}" | xargs kill -SIGINT |
