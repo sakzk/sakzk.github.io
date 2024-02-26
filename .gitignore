@@ -19,6 +19,9 @@ convert_png2webp.sh
 
 /_drafts/*
 
+# export to wiki page
+/_wiki/*
+
 # writing environment
 /_posts/.obsidian/*
 /_posts/home.md
