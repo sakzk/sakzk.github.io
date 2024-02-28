@@ -17,7 +17,10 @@ Gemfile.lock
 # tools
 convert_png2webp.sh
 
+# prepublished
 /_drafts/*
+# unpublished
+/_archived/*
 
 # export to wiki page
 /_wiki/*
