@@ -4,33 +4,21 @@ title:  "jekyllの使い方で気づいたことを書いていく"
 date:   2024-01-29 14:00:00 +0900
 ---
 
-## 2024-01-29 _site/foo.html が生成されない問題を解決した。
-問題： _posts/foo.md に対応する _site/foo.html が生成されておらず、そのため index.html 内の記事リンクも生成されていなかった。
+---
+## 2024-02-27 _posts/foo.md 消失の原因を特定した。
+事象：
+`YYYY-MM-DD-foo.md` が消失した。
 
-原因：front matter に `categories: test` と書いていた。
+原因：
+記事ファイルを生成するシェルスクリプト `create_article_file.sh` で、テンプレートのファイルへの書き込み追加が `>`で実行されていた。このため、すでに存在している.mdファイルをテンプレートの文字列で上書きしていた。
 
-対策：front matter の categories がなくても _site 内に .html が生成できたし、
-記事分類のこうもり問題を避けるためにも categories はつかわないことにする。
+解決：
+同名のファイルの存在を確認して存在していれば新しいファイルの生成をスキップする処理を`create_article_file.sh`に追加した。
 
-なお、ビルド時に .md に対応する .html が _site/ に作られるための必要条件には以下のものがある。
-1. dateが現在時刻よりまえ
-2. markdownのファイル名が日付だけではない
-3. titleが空欄ではない
+感想：
+2日連続で数千文字が消失してとても悲しくなっていた。ブログ執筆立ち上げコマンドが、ファイル生成スクリプトを呼び、そこでファイルを上書きしていたので原因特定が遅れた。もうこれ以上vim, vscodeを疑わなくて済むので心が楽になる
 
-.md ファイルを生成するスクリプトは
-[create_article_file.sh](https://github.com/sakzk/sakzk.github.io/blob/main/create_article_file.sh)。
-このスクリプトは_siteには不必要なので_config.ymlのexcludeに追加しておく。
-
-## 2024-01-30 画像ファイルをpngからwebpにした。
-手順：
-1. `brew install webp` で cwebp をインストールする
-- `brew install cwebp` ではだめ。 `Warning: No available formula with the name "cwebp". Did you mean cweb or webp?` という警告がでるので webp を選ぶ。
-2. ブログのディレクトリに移動して、`find . -type f -name "*.png"` で png ファイルを探す。
-3. `webp foo.png -o bar.webp` でファイルを変換する。
-4. リンクの置換はVSCodeから行った。
-
-今回はファイルが一つしかないことがわかっていたので手作業でやった。今後、画像はwebp ファイルでアップロードしていく。
-
+---
 ## 2024-02-22 ローカルサーバーを停止するワンライナーを書いた。
 
 `jekyll serve` で起動したローカルサーバーを止めるワンライナー：
@@ -59,3 +47,32 @@ alias serv='ps aux | grep "jekyll" | grep -v "grep" | awk "{print \$2}" | xargs 
 			# 既存のプロセスが存在するかもしれないので、止めてからserveする。
 alias unserv='ps aux | grep "jekyll" | grep -v "grep" | awk "{print \$2}" | xargs kill -SIGINT'
 ```
+
+---
+## 2024-01-30 画像ファイルをpngからwebpにした。
+手順：
+1. `brew install webp` で cwebp をインストールする
+- `brew install cwebp` ではだめ。 `Warning: No available formula with the name "cwebp". Did you mean cweb or webp?` という警告がでるので webp を選ぶ。
+2. ブログのディレクトリに移動して、`find . -type f -name "*.png"` で png ファイルを探す。
+3. `webp foo.png -o bar.webp` でファイルを変換する。
+4. リンクの置換はVSCodeから行った。
+
+今回はファイルが一つしかないことがわかっていたので手作業でやった。今後、画像はwebp ファイルでアップロードしていく。
+
+---
+## 2024-01-29 _site/foo.html が生成されない問題を解決した。
+問題： _posts/foo.md に対応する _site/foo.html が生成されておらず、そのため index.html 内の記事リンクも生成されていなかった。
+
+原因：front matter に `categories: test` と書いていた。
+
+対策：front matter の categories がなくても _site 内に .html が生成できたし、
+記事分類のこうもり問題を避けるためにも categories はつかわないことにする。
+
+なお、ビルド時に .md に対応する .html が _site/ に作られるための必要条件には以下のものがある。
+1. dateが現在時刻よりまえ
+2. markdownのファイル名が日付だけではない
+3. titleが空欄ではない
+
+.md ファイルを生成するスクリプトは
+[create_article_file.sh](https://github.com/sakzk/sakzk.github.io/blob/main/create_article_file.sh)。
+このスクリプトは_siteには不必要なので_config.ymlのexcludeに追加しておく。
