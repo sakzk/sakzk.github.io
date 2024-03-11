@@ -21,7 +21,7 @@
 title: marginalia index
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  sakzkのブログです。主に日記や読書メモなど。
+  sakzkのブログです。主に日記や学習ノートなど。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -31,9 +31,6 @@ github_username:  sakzk
 theme: minima
 plugins:
   - jekyll-feed
-
-# analytics
-google_analytics: G-B85EX4B3BG
 
 # Exclude from processing.
 # The following items will not be processed, by default.
