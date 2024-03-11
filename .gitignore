@@ -19,8 +19,7 @@ convert_png2webp.sh
 
 # prepublished
 /_drafts/*
-# unpublished
-/_archived/*
+/_themes/*
 
 # export to wiki page
 /_wiki/*
