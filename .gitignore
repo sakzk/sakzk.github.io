@@ -25,5 +25,6 @@ convert_png2webp.sh
 /_wiki/*
 
 # writing environment
+/_posts/.idea/*
 /_posts/.obsidian/*
 /_posts/home.md
