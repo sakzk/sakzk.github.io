@@ -96,7 +96,7 @@ defaults:
     scope:
       path: "assets/blog"
     values:
-      layout: "git-wiki-blog"
+      layout: "git-wiki-post"
 sass:
     style: compressed
 plugins:
