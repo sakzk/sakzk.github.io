@@ -91,12 +91,12 @@ defaults:
       path: "_posts"
       # type: "post"
     values:
-      layout: "git-wiki-post"
+      layout: "git-wiki-default"
  -
     scope:
       path: "assets/blog"
     values:
-      layout: "git-wiki-blog"
+      layout: "git-wiki-defaut"
 sass:
     style: compressed
 plugins:
