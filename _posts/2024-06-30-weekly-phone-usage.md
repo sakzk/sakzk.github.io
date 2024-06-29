@@ -1,5 +1,6 @@
 ---
 published: true
+layout: post
 title: "My Smartphone Usage This Week and Thoughts, with an Estimate on Japanese-Speaking Twitter"
 ---
 
