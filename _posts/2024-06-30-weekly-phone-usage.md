@@ -1,5 +1,7 @@
 ---
 published: true
+layout: post
+title: "My Smartphone Usage This Week and Thoughts, with an Estimate on Japanese-Speaking Twitter"
 ---
 
 ## 2024-06-21 から 2024-06-30 のスマホ使用時間
