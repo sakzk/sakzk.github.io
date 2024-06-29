@@ -1,4 +1,7 @@
 ---
+published: true
+layout: post
+title: "non-wiki test"
 date: 2024-6-30 00:00:00 +9:00
 ---
 

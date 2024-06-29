@@ -2,6 +2,7 @@
 published: true
 layout: post
 title: "My Smartphone Usage This Week and Thoughts, with an Estimate on Japanese-Speaking Twitter"
+date: 2024-6-30 00:00:00 +9:00
 ---
 
 ## 2024-06-21 から 2024-06-30 のスマホ使用時間
