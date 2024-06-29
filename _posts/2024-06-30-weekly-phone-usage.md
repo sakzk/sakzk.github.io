@@ -1,6 +1,6 @@
 ---
 published: true
-layout: post
+# layout: post
 title: "My Smartphone Usage This Week and Thoughts, with an Estimate on Japanese-Speaking Twitter"
 date: 2024-6-30 00:00:00 +9:00
 ---
