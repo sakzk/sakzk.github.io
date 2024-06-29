@@ -1,2 +1,6 @@
+---
+date: 2024-6-30 00:00:00 +9:00
+---
+
 # Test page in assets/blog/
 This is test page.
