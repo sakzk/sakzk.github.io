@@ -19,10 +19,15 @@ for filename in files:
     with open(filepath, 'r', encoding='utf-8') as file:
         lines = file.readlines()
         # 最初の3行が取得できる場合のみ処理する
-        if len(lines) >= 3:
-            # 日付、タイトル、ファイル名を取得する
+        if len(lines) >= 4:
+            # title: "" はマッチしないタイトルとして捨てる。
+            import re
+            match = re.search(r'title: "(.*)"', lines[1].strip())
+            if match:
+                post_title = match.group(1)
+            else:
+                post_title = "" # ここでappend しないようにしたいがやり方がわからない。空文字を入れて、entry -> string のところで弾く
             post_date_YYYY_MM_DD = filename[:10]  # ファイル名から日付部分を取得
-            post_title = lines[1].strip()  # 2行目をタイトルとする
             post_path = filename  # ファイル名そのままをパスとする
             # [date, title, file_name] の形式でリストに追加
             post_entries.append([post_date_YYYY_MM_DD, post_title, post_path])
@@ -37,14 +42,10 @@ for post_entry in post_entries:
     # 元の文字列
 
 # 正規表現パターンで ~ を抽出する
-    import re
-    match = re.search(r'title: "(.*?)"', post_entry[1])
-    if match:
-        post_title = match.group(1)
-    else:
-        post_title = "invalid title"
+    post_title = post_entry[1]
+    if post_title == "":
+        continue
     post_path = post_entry[2]
-    # blog_content.append(f"{post_date_YYYY_MM_DD} [{post_title}]({{site.baseurl}}/_posts/{post_path})\n\n")
     blog_content.append(post_date_YYYY_MM_DD + " [" + post_title + "](../_posts/" + post_path + ")\n\n")
 
 # ブログテキストを生成
