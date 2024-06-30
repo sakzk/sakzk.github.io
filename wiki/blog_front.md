@@ -3,5 +3,9 @@
 
 2024-06-30 [title: "今週のスマホ使用時間と日本語圏 Twitter について思ったこと。"]({{ site.baseurl }}/_posts/2024-06-30-weekly-phone-usage.md)
 
-2020-01-01 [published: true](2020-01-01-example-post.md)
+2024-06-30 [title: "今週のスマホ使用時間と日本語圏 Twitter について思ったこと。"](../_posts/2024-06-30-weekly-phone-usage.md)
+
+2020-01-01 [published: true]({{ site.baseurl }}/_posts/2020-01-01-example-post.md)
+
+2020-01-01 [published: true](../_posts/2020-01-01-example-post.md)
 
