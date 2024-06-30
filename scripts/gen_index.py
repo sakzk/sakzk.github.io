@@ -36,7 +36,8 @@ for post_entry in post_entries:
     post_date_YYYY_MM_DD = post_entry[0]
     post_title = post_entry[1]
     post_path = post_entry[2]
-    blog_content.append(f"{post_date_YYYY_MM_DD} [{post_title}](/_posts/{post_path})\n\n")
+    # blog_content.append(f"{post_date_YYYY_MM_DD} [{post_title}](\{\{site.baseurl}}/_posts/{post_path})\n\n")
+    blog_content.append(post_date_YYYY_MM_DD + "[" + post_title + "]({{ site.baseurl }}/_posts/" + post_path + ")\n\n")
 
 # ブログテキストを生成
 blog_text = blog_header + "".join(blog_content)
