@@ -1,5 +1,7 @@
 ---
-published: true
+title: "example post"
+date: 2024-6-29 12:00:00 +9:00
+published: false
 ---
 
 ## Example post
