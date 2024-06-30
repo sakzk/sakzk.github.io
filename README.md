@@ -2,4 +2,4 @@
 
 [https://sakzk.github.io/](https://sakzk.github.io/) で公開しています。
 
-[https://sakzk.github.io/blog-front](https://sakzk.github.io/blog-front) こちらはブログ記事
+[ブログ記事一覧](https://sakzk.github.io/blog-front) 
