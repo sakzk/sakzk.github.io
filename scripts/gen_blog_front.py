@@ -48,7 +48,7 @@ for post_entry in post_entries:
 blog_text = blog_header + "".join(blog_content)
 
 # ファイルに書き出す例
-output_filename = os.path.join(wiki_dir, "blog_front.md")  # 出力ファイル名
+output_filename = os.path.join(wiki_dir, "blog-front.md")  # 出力ファイル名
 with open(output_filename, 'w', encoding='utf-8') as outfile:
     outfile.write(blog_text)
 
