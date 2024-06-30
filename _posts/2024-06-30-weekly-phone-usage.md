@@ -1,8 +1,7 @@
 ---
-published: true
-# layout: post
 title: "今週のスマホ使用時間と日本語圏 Twitter について思ったこと。"
 date: 2024-6-30 00:00:00 +9:00
+published: true
 ---
 
 ## 2024-06-21 から 2024-06-30 のスマホ使用時間
