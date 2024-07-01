@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ファイル名を現在の日付から生成
-posts_path='../_posts/'
+posts_path='./_posts/'
 filename="$(date +'%Y-%m-%d')-today.md"
 
 # ファイルが既に存在するか確認
@@ -19,6 +19,8 @@ published: false
 "
 
 # ファイルにテキストを書き込み
+touch ${posts_path}${filename}
+# pwd
 echo -e "$content" >> "${posts_path}${filename}"
 
 # 結果を表示
