@@ -38,7 +38,7 @@ for filename in files:
             # techbook_entries.append([post_date_YYYY_MM_DD, post_title, filename])
 
 # 書籍リスト記事を生成する。
-booklist_header = "読んだ本をまとめています。\n"
+booklist_header = "# 読んだ本一覧\n\n読書メモへのリンク集です。\n\n"
 teckbook_header = "# 技術書一覧\n\n"
 teckbook_content = []
 # ブログのポストエントリーごとにテキスト化し、リストに追加していく
