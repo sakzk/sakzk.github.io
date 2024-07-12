@@ -9,7 +9,8 @@ posts_dir = "../_posts"
 
 wiki_dir = "../wiki"
 # _posts ディレクトリ直下のファイルを列挙する
-files = os.listdir(posts_dir)
+# 新着順にするために、ファイル名 (プレフィクスはYYYY-MM_DD) で逆順にソート
+files = sorted(os.listdir(posts_dir), reverse=True)
 
 post_entries = []
 
