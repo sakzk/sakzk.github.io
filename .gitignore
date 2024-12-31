@@ -1,0 +1,8 @@
+_site
+Gemfile.*.lock
+.sass-cache
+.tmp.drivedownload
+.tmp.driveupload
+vendor/
+
+_trash/**

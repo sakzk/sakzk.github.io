@@ -1,0 +1,14 @@
+FROM ruby:3.0.0
+
+ENV LC_ALL=C.UTF-8=value
+
+ADD . /srv/jekyll
+
+WORKDIR /srv/jekyll
+
+RUN gem update --system
+# gemのバージョンを合わせるために必要
+
+RUN bundle install --gemfile=.env-files/Gemfile.github
+
+EXPOSE 4000
