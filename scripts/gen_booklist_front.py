@@ -27,16 +27,6 @@ for filename in files:
     # 今後ジャンルが増えるかも
     continue
 
-    # mdファイル名ではなく、フロントマターを使う場合はこちらに切り替える
-    # ファイルを読みむ→フロントマターをパターンマッチの流れ
-    # with open(filepath, 'r', encoding='utf-8') as file:
-        # lines = file.readlines()
-        # if len(lines) >= 1:
-        #     match = re.search(r'category: tech-book', lines[1].strip())
-        #     if not match:
-        #         continue
-            # techbook_entries.append([post_date_YYYY_MM_DD, post_title, filename])
-
 # 書籍リスト記事を生成する。
 booklist_header = "# 読んだ本一覧\n\n読書メモへのリンク集です。\n\n"
 teckbook_header = "# 技術書一覧\n\n"

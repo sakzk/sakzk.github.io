@@ -20,9 +20,9 @@ for filename in files:
     # 最初の3行を読み込む
     with open(filepath, 'r', encoding='utf-8') as file:
         lines = file.readlines()
-        # 最初の3行が取得できる場合のみ処理する
+        # 最初の3行が取得できない場合は不正な記事としみなして弾く。
         if len(lines) >= 3:
-            # title: "" はマッチしないタイトルとして弾く。
+            # title: "" は不正な記事とみなして弾く。
             match = re.search(r'title: "(.*)"', lines[1].strip())
             if not match:
                 continue
