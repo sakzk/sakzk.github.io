@@ -5,4 +5,5 @@
 cd "$(dirname "$0")"
 
 python3 gen_blog_front.py
+python3 gen_wiki_front.py
 python3 gen_booklist_front.py
