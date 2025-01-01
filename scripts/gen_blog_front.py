@@ -7,7 +7,6 @@ script_dir = "./scripts"
 # _posts ディレクトリのパス
 posts_dir = "../_posts"
 
-wiki_dir = "../wiki"
 # _posts ディレクトリ直下のファイルを列挙する
 # 新着順にするために、ファイル名 (プレフィクスはYYYY-MM_DD) で逆順にソート
 files = sorted(os.listdir(posts_dir), reverse=True)
@@ -49,6 +48,7 @@ for post_entry in post_entries:
 blog_text = blog_header + "".join(blog_content)
 
 # ファイルに書き出す例
+wiki_dir = "../wiki"
 output_filename = os.path.join(wiki_dir, "blog-front.md")  # 出力ファイル名
 with open(output_filename, 'w', encoding='utf-8') as outfile:
     outfile.write(blog_text)
