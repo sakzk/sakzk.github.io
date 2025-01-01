@@ -36,7 +36,7 @@ for filename in files:
 
 # ブログのコンテンツを格納するリスト
 article_content = []
-article_header = "# wiki記事一覧 (新着順)\nwiki記事を時系列でまとめています。(読書メモ除く)\n読書メモは[こちら](https://sakzk.github.io/booklist-front)から\n\n"
+article_header = "# wiki記事一覧 (新着順)\nwiki記事を時系列でまとめています。(読書メモ除く)\n\n"
 
 # ブログのポストエントリーごとにテキスト化し、リストに追加していく
 for wiki_entry in wiki_entries:
