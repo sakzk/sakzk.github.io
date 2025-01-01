@@ -6,3 +6,4 @@ Gemfile.*.lock
 vendor/
 
 _trash/**
+_posts/_*
