@@ -48,4 +48,4 @@ output_filename = os.path.join(wiki_dir, "booklist-front.md")  # 出力ファイ
 with open(output_filename, 'w', encoding='utf-8') as outfile:
     outfile.write(booklist_text)
 
-print(f"ブログ記事一覧を {output_filename} に出力しました。")
+print(f"読書メモ記事一覧を {output_filename} に出力しました。")
