@@ -13,7 +13,7 @@ fi
 # ファイルに書き込むテキストを生成
 content="---
 title: \"\"
-published: false
+published: true
 ---
 "
 

@@ -14,7 +14,7 @@ fi
 content="---
 title: \"$(date +'%Y年%m月%d日')の日記 365日中$(date +%-j)日目\"
 date:  $(date +'%Y-%m-%d %H:00:00 %z')
-published: false
+published: true
 ---
 
 ## チェックリスト
